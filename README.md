@@ -1,6 +1,6 @@
 # São Paulo Subway
 
-Leia isso em [Brazillian Portuguese](README.md).
+Leia isso em [Brazillian Portuguese](README-ptbr.md).
 
 I'm creating this component to get status from subwat lines in my city, and add to sensors to Home Assistant
 
