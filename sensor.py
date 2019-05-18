@@ -1,16 +1,12 @@
 # -*- coding: iso-8859-15 -*
 import os
 import json
+from homeassistant.helpers.entity import Entity
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup the sensor platform."""
-    add_devices([linha1()])
-	add_devices([linha2()])
-	add_devices([linha3()])
-	add_devices([linha4()])
-	add_devices([linha5()])
-	add_devices([linha15()])
-
+    add_devices([linha1()], [linha2()], [linha3()], [linha4()], [linha5()], [linha15()])
+	
 
 class linha1(Entity):
     """Representation of a Sensor."""
@@ -33,7 +29,7 @@ class linha1(Entity):
 		http = os.popen("curl http://www.metro.sp.gov.br/Sistemas/direto-do-metro-via4/diretodoMetroHome.aspx?id=9798c019-a3f5-476f-8a3e-911eb63a0a86").read()
 		html = str(http)
 		
-        comecolinha1 = html.find('1b848518-57ba-4659-93bb-aff76790e352')
+        	comecolinha1 = html.find('1b848518-57ba-4659-93bb-aff76790e352')
 		finallinha1 = html.find('"codigo" : "1"}')
 
 		linha1 = html[(comecolinha1 - 11):(finallinha1 + 16)]
@@ -81,12 +77,12 @@ class linha2(Entity):
 
 		if 'Linha 2' in aux2:
 			status2 = linha2json["msgStatus"]
-				if 'Normal' in status2:
-					self._state = "Normal"
-				if 'Reduzida' in status2:
-					self._state = "Velocidade Reduzida"
-				if 'Encerrada' in status2:
-					self._state = "Fechado"
+			if 'Normal' in status2:
+				self._state = "Normal"
+			if 'Reduzida' in status2:
+				self._state = "Velocidade Reduzida"
+			if 'Encerrada' in status2:
+				self._state = "Fechado"
 					
 class linha3(Entity):
     """Representation of a Sensor."""
@@ -124,7 +120,7 @@ class linha3(Entity):
 			if 'Reduzida' in status3:
 				self._state = "Velocidade Reduzida"
 			if 'Encerrada' in status3:
-                self._state = "Fechado"
+                		self._state = "Fechado"
 		
 class linha4(Entity):
     """Representation of a Sensor."""
@@ -160,7 +156,7 @@ class linha4(Entity):
 			if 'Normal' in status4:
 				self._state = "Normal"
 			if 'Reduzida' in status4:
-                self._state = "Velocidade Reduzida"
+                		self._state = "Velocidade Reduzida"
 			if 'Encerrada' in status4:
 				self._state = "Fechado"
 
@@ -196,11 +192,11 @@ class linha5(Entity):
 		if 'Linha 5' in aux5:
 			status5 = linha5json["msgStatus"]
 			if 'Normal' in status5:
-                self._state = "Normal"
+                		self._state = "Normal"
 			if 'Reduzida' in status5:
-                self._state = "Velocidade Reduzida"
+                		self._state = "Velocidade Reduzida"
 			if 'Encerrada' in status5:
-                self._state = "Fechado"
+                		self._state = "Fechado"
 				
 class linha15(Entity):
     """Representation of a Sensor."""
@@ -234,8 +230,8 @@ class linha15(Entity):
 		if 'Linha 15' in aux15:
 			status15 = linha15json["msgStatus"]
 			if 'Normal' in status15:
-                self._state = "Normal"
+               			self._state = "Normal"
 			if 'Reduzida' in status15:
-                self._state = "Velocidade Reduzida"
+                		self._state = "Velocidade Reduzida"
 			if 'Encerrada' in status15:
-                self._state = "Fechado"
+                		self._state = "Fechado"
