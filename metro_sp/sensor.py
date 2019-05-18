@@ -5,8 +5,7 @@ import json
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup the sensor platform."""
-    #add_devices([linha1()], [linha2()], [linha3()], [linha4()], [linha5()], [linha15()])
-    add_devices([linha1()])
+    add_devices([linha1()], [linha2()], [linha3()], [linha4()], [linha5()], [linha15()])
 
 class linha1(Entity):
     """Representation of a Sensor."""
@@ -235,3 +234,5 @@ class linha15(Entity):
                 self._state = "Velocidade Reduzida"
 			if 'Encerrada' in status15:
                 self._state = "Fechado"
+
+			
