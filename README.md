@@ -1,4 +1,4 @@
-# São Paulo Subway
+# Metro São Paulo
 
 Read this in [English](README-en.md).
 
