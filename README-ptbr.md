@@ -1,6 +1,6 @@
 # Metro São Paulo
 
-Read this in [English](README-en.md).
+Read this in [English](README.md).
 
 Estou criando esse componente customizado para pegar o status do Metro de São Paulo, e adicionar como sensores no Home Assistant.
 
