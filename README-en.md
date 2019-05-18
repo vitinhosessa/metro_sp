@@ -1,0 +1,8 @@
+# São Paulo Subway
+
+Read this in [Brazillian Portuguese](README.md).
+
+I'm creating this component to get status from subwat lines in my city, and add to sensors to Home Assistant
+
+## License
+This code is public domain. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. http://www.gnu.org/licenses/. Certain libraries used may be under a different license.
