@@ -17,18 +17,26 @@ The 3 possible results:
 * Velocidade Reduzida (Reduced Speed)
 * Fechado (Closed)
 
-## Instalação
+## Installation
 Download the .zip file ([here](https://github.com/vitinhosessa/metro_sp/releases)) and copy the folder `` metro_sp`` and paste on ``config/custom_components/``, where the files would look like this:
 * ``config/custom_components/metro_sp/__init__.py``
 * ``config/custom_components/metro_sp/device_tracker.py``
 * ``config/custom_components/metro_sp/manifest.json``
 
+Add to ``configuration.yaml``:
+````yaml
+sensor:
+  - platform: metro_sp
+````
+
 ## Config custom_updater
+Add to ``configuration.yaml``:
 ````yaml
 custom_updater:
   component_urls:
     - https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/custom_components.json
 ````
+Whenever ``metro_sp`` is updated by `` custom_updater``, restart your Home Assistant.
 
 ## Lovelace Card Example
 
