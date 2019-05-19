@@ -3,6 +3,7 @@ from homeassistant.helpers.entity import Entity
 import json
 import os
 import requests
+import time
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup the sensor platform."""
@@ -13,7 +14,7 @@ class linha1(Entity):
 
     def __init__(self):
         """Initialize the sensor."""
-        self._state = None
+        self._state = "Inicializando..."
 
     @property
     def name(self):
@@ -26,6 +27,7 @@ class linha1(Entity):
         return self._state
 
     def update(self):
+        time.sleep(50)
         r = requests.get("http://www.metro.sp.gov.br/Sistemas/direto-do-metro-via4/diretodoMetroHome.aspx?id=9798c019-a3f5-476f-8a3e-911eb63a0a86")
         http = r.text
         html = str(http)
@@ -55,7 +57,7 @@ class linha2(Entity):
 
     def __init__(self):
         """Initialize the sensor."""
-        self._state = None
+        self._state = "Inicializando..."
 
     @property
     def name(self):
@@ -68,6 +70,7 @@ class linha2(Entity):
         return self._state
 
     def update(self):
+        time.sleep(50)
         r = requests.get("http://www.metro.sp.gov.br/Sistemas/direto-do-metro-via4/diretodoMetroHome.aspx?id=9798c019-a3f5-476f-8a3e-911eb63a0a86")
         http = r.text
         html = str(http)
@@ -97,7 +100,7 @@ class linha3(Entity):
 
     def __init__(self):
         """Initialize the sensor."""
-        self._state = None
+        self._state = "Inicializando..."
 
     @property
     def name(self):
@@ -110,6 +113,7 @@ class linha3(Entity):
         return self._state
 
     def update(self):
+        time.sleep(50)
         r = requests.get("http://www.metro.sp.gov.br/Sistemas/direto-do-metro-via4/diretodoMetroHome.aspx?id=9798c019-a3f5-476f-8a3e-911eb63a0a86")
         http = r.text
         html = str(http)
@@ -139,7 +143,7 @@ class linha4(Entity):
 
     def __init__(self):
         """Initialize the sensor."""
-        self._state = None
+        self._state = "Inicializando..."
 
     @property
     def name(self):
@@ -152,6 +156,7 @@ class linha4(Entity):
         return self._state
 
     def update(self):
+        time.sleep(50)
         r = requests.get("http://www.metro.sp.gov.br/Sistemas/direto-do-metro-via4/diretodoMetroHome.aspx?id=9798c019-a3f5-476f-8a3e-911eb63a0a86")
         http = r.text
         html = str(http)
@@ -181,7 +186,7 @@ class linha5(Entity):
 
     def __init__(self):
         """Initialize the sensor."""
-        self._state = None
+        self._state = "Inicializando..."
 
     @property
     def name(self):
@@ -194,6 +199,7 @@ class linha5(Entity):
         return self._state
 
     def update(self):
+        time.sleep(50)
         r = requests.get("http://www.metro.sp.gov.br/Sistemas/direto-do-metro-via4/diretodoMetroHome.aspx?id=9798c019-a3f5-476f-8a3e-911eb63a0a86")
         http = r.text
         html = str(http)
@@ -223,7 +229,7 @@ class linha15(Entity):
 
     def __init__(self):
         """Initialize the sensor."""
-        self._state = None
+        self._state = "Inicializando..."
 
     @property
     def name(self):
@@ -236,6 +242,7 @@ class linha15(Entity):
         return self._state
 
     def update(self):
+        time.sleep(50)
         r = requests.get("http://www.metro.sp.gov.br/Sistemas/direto-do-metro-via4/diretodoMetroHome.aspx?id=9798c019-a3f5-476f-8a3e-911eb63a0a86")
         http = r.text
         html = str(http)
