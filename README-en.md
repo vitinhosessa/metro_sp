@@ -23,6 +23,13 @@ Download the .zip file ([here](https://github.com/vitinhosessa/metro_sp/releases
 * ``config/custom_components/metro_sp/device_tracker.py``
 * ``config/custom_components/metro_sp/manifest.json``
 
+## Config custom_updater
+````yaml
+custom_updater:
+  component_urls:
+    - https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/custom_components.json
+````
+
 ## Lovelace Card Example
 
 <img src="/images/lovelace-card-metro.png" alt="lovelace-card-metro" width="500px" align="center">
