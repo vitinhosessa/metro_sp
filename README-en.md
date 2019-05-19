@@ -1,6 +1,6 @@
 # São Paulo Subway
 
-Leia isso em [Brazillian Portuguese](README-ptbr.md).
+Leia isso em [Brazillian Portuguese](README.md).
 
 The data of the lines 1 (Blue), 2 (Green), 3 (Red), 4 (Yellow), 5 (Purple) and 15 (Silver) of the São Paulo Metro are taken from the [Metro](http://www.metro.sp.gov.br/).
 
