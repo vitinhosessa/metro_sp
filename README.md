@@ -23,12 +23,21 @@ Baixe nos releases o arquivo .zip ([aqui](https://github.com/vitinhosessa/metro_
 * ``config/custom_components/metro_sp/device_tracker.py``
 * ``config/custom_components/metro_sp/manifest.json``
 
+Adicione no ``configuration.yaml``:
+
+````yaml
+sensor:
+  - platform: metro_sp
+````
+
 ## Configurar custom_updater
+Adicione no ``configuration.yaml``:
 ````yaml
 custom_updater:
   component_urls:
     - https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/custom_components.json
 ````
+Sempre que o ``metro_sp`` for atualizado pelo ``custom_updater``, reinicie o Home Assistant.
 
 ## Exemplo Lovelace Card
 
