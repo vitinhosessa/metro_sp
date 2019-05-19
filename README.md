@@ -24,11 +24,12 @@ Baixe nos releases o arquivo .zip ([aqui](https://github.com/vitinhosessa/metro_
 * ``config/custom_components/metro_sp/manifest.json``
 
 Adicione no ``configuration.yaml``:
-
 ````yaml
 sensor:
   - platform: metro_sp
 ````
+
+Reinicie o Home Assistant.
 
 ## Configurar custom_updater
 Adicione no ``configuration.yaml``:
