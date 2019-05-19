@@ -1,7 +1,7 @@
 {
   "metro_sp": {
     "updated_at": "2019-05-19",
-    "version": "0.1b1",
+    "version": "0.1b2",
     "local_location": "/custom_components/metro_sp/__init__.py",
     "remote_location": "https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/metro_sp/__init__.py",
     "visit_repo": "https://github.com/vitinhosessa/metro_sp",
