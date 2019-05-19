@@ -52,6 +52,5 @@ entities:
     icon: 'mdi:subway-variant'
 ````
 
-
 ## Licença
 Este código é de domínio público. Você pode redistribuí-lo e / ou modificá-lo sob os termos da Licença Pública Geral GNU, publicada pela Free Software Foundation. http://www.gnu.org/licenses/. Certas bibliotecas podem estar sob uma licença diferente.
