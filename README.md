@@ -2,7 +2,7 @@
 
 Read this in [English](README.md).
 
-Os dados das linhas 1, 2, 3, 4, 5 e 15 do Metro de São Paulo são tirados do site do [Metro](http://www.metro.sp.gov.br/).
+Os dados das linhas 1 (Azul), 2 (Verde), 3 (Vermelha), 4 (Amarela), 5 (Lilas) e 15 (Prata) do Metro de São Paulo são tirados do site do [Metro](http://www.metro.sp.gov.br/).
 
 O custom_component cria 6 sensores: 
 * sensor.linha_1_azul
