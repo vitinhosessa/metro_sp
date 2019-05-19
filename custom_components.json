@@ -5,7 +5,7 @@
     "local_location": "/custom_components/metro_sp/__init__.py",
     "remote_location": "https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/metro_sp/__init__.py",
     "visit_repo": "https://github.com/vitinhosessa/metro_sp",
-    "changelog": "https://github.com/vitinhosessa/metro_sp/blob/master/README.md",
+    "changelog": "https://github.com/vitinhosessa/metro_sp",
     "resources": [
       "https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/metro_sp/sensor.py",
       "https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/metro_sp/manifest.json"
