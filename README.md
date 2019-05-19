@@ -19,7 +19,7 @@ Os 3 possiveis resultados:
 
 Exemplo:
 
-
+<img src="/images/lovelace-card-metro.png" alt="lovelace-card-metro" width="500px" align="center">
 
 ## Licença
 Este código é de domínio público. Você pode redistribuí-lo e / ou modificá-lo sob os termos da Licença Pública Geral GNU, publicada pela Free Software Foundation. http://www.gnu.org/licenses/. Certas bibliotecas podem estar sob uma licença diferente.
