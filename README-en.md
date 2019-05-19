@@ -59,6 +59,15 @@ entities:
     icon: 'mdi:subway-variant'
 ````
 
+## Changelog
+
+### [0.1b2] - 2019-05-19
+#### Changed
+- Lines informations will be checked every 5 min.
+
+### [0.1b1] - 2019-05-19
+- First release.
+
 ## License
 This code is public domain. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. http://www.gnu.org/licenses/. Certain libraries used may be under a different license.
 
