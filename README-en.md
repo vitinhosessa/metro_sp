@@ -29,6 +29,8 @@ sensor:
   - platform: metro_sp
 ````
 
+Restart your Home Assistant.
+
 ## Config custom_updater
 Add to ``configuration.yaml``:
 ````yaml
