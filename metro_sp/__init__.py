@@ -1,3 +1,3 @@
 """Metro São Paulo sensor"""
 
-__version__ = '0.1b2'
+__version__ = '0.1b3'
