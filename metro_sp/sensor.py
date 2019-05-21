@@ -6,7 +6,7 @@ import os
 import requests
 import time
 
-SCAN_INTERVAL = timedelta(minutes=2)
+SCAN_INTERVAL = timedelta(minutes=5)
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup the sensor platform."""
