@@ -30,7 +30,7 @@ sensor:
     scan_interval: 300  # Opicional
 ````
 
-Variaveis na Configuração:
+Variável na Configuração:
 * **scan_interval** (Opicional): O padrão é 300 (5 minutos) caso não declarar essa variavel. Você pode mudar para qualquer valor que desejar, mas tenha em mente que quanto menor o valor, mais vezes o Home Assistant vai pegar a informção no site do Metro e isso pode causar uma queda de velocidade no sistema do Home Assistant e até causar falhas. Eu acho seguro no valor minimo de 60 segundos (1 minuto).
 
 Reinicie o Home Assistant.
