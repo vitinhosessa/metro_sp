@@ -71,7 +71,7 @@ entities:
 
 ### [0.1b3] - 2019-05-21
 #### Adições
- - Foi adicionado ``scan_interval`` caso queria mudar a frequência da atualização das informações das linhas.
+ - Foi adicionado uma variável na configuração ``scan_interval`` caso queria mudar a frequência das atualizações das informações das linhas.
 #### Melhorias
 - Implementado um jeito melhor para fazer o update a cada 5 min.
 
