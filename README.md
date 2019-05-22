@@ -50,22 +50,16 @@ title: Metro
 show_header_toggle: false
 entities:
   - entity: sensor.linha_1_azul
-    name: Linha 1 - Azul
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_2_verde
-    name: Linha 2 - Verde
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_3_vermelha
-    name: Linha 3 - Vermelha
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_4_amarela
-    name: Linha 4 - Amarela
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_5_lilas
-    name: Linha 5 - Lilas
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_15_prata
-    name: Linha 15 - Prata
     icon: 'mdi:subway-variant'
 ````
 
