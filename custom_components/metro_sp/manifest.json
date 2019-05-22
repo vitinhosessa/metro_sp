@@ -1,7 +1,7 @@
 {
   "domain": "metro_sp",
   "name": "Metro São Paulo",
-  "documentation": "https://github.com/vitinhosessa/metro_sp/tree/master",
+  "documentation": "https://github.com/vitinhosessa/metro_sp",
   "dependencies": [],
   "codeowners": [
 	"@vitinhosessa"
