@@ -27,7 +27,11 @@ Add to ``configuration.yaml``:
 ````yaml
 sensor:
   - platform: metro_sp
+    scan_interval: 300  # Optional
 ````
+
+Configuration variable:
+* **scan_interval** (Optional): The default is value is 300 (5 minutes) if you don't want to declare this variable. You can change to any value you want but keep in mind that the lowest value will make more updates, and will pick up an information on the Subway website and may have a speed drop on the Home Assist system and a maybe a crash. I think the lowest safest value is 60 seconds (1 minute).
 
 Restart your Home Assistant.
 
@@ -50,26 +54,28 @@ title: Metro
 show_header_toggle: false
 entities:
   - entity: sensor.linha_1_azul
-    name: Linha 1 - Azul
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_2_verde
-    name: Linha 2 - Verde
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_3_vermelha
-    name: Linha 3 - Vermelha
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_4_amarela
-    name: Linha 4 - Amarela
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_5_lilas
-    name: Linha 5 - Lilas
     icon: 'mdi:subway-variant'
   - entity: sensor.linha_15_prata
-    name: Linha 15 - Prata
     icon: 'mdi:subway-variant'
 ````
 
 ## Changelog
+
+### [0.1b3] - 2019-05-21
+#### New
+ - Added the configuration variable "scan_interval" to change the update rate to get the line information.
+#### Improvement
+- A better way to do the update every 5 minutes was implemented.
+
+Thanks to the Home Assistant chat on Discord that helped me make this implementation.
 
 ### [0.1b2] - 2019-05-19
 #### Changed
