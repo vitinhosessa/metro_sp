@@ -27,7 +27,11 @@ Adicione no ``configuration.yaml``:
 ````yaml
 sensor:
   - platform: metro_sp
+    scan_interval: 300  # Opicional
 ````
+
+Variaveis na Configuração:
+* **scan_interval** (Opicional): O padrão é 300 (5 minutos) caso não declarar essa variavel. Você pode mudar para qualquer valor que desejar, mas tenha em mente que quanto menor o valor, mais vezes o Home Assistant vai pegar a informção no site do Metro e isso pode causar uma queda de velocidade no sistema do Home Assistant e até causar falhas. Eu acho seguro no valor minimo de 60 segundos (1 minuto).
 
 Reinicie o Home Assistant.
 
@@ -65,12 +69,20 @@ entities:
 
 ## Changelog
 
+### [0.1b3] - 2019-05-21
+#### Adições
+ - Foi adicionado ``scan_interval`` caso queria mudar a frequência da atualização das informações das linhas.
+#### Melhorias
+- Implementado um jeito melhor para fazer o update a cada 5 min.
+
+Agradecimentos ao chat do Home Assistant no Discord que me ajudou a fazer essa implementação
+
 ### [0.1b2] - 2019-05-19
-#### Changed
-- Informações das linhas serão checadas a cada 5 min.
+#### Mudanças
+- Informações das linhas serão atualizadas a cada 5 min.
 
 ### [0.1b1] - 2019-05-19
-- First release.
+- Primeiro release. Espero que funcione para todos. 🎉
 
 ## Licença
 Este código é de domínio público. Você pode redistribuí-lo e / ou modificá-lo sob os termos da Licença Pública Geral GNU, publicada pela Free Software Foundation. http://www.gnu.org/licenses/. Certas bibliotecas podem estar sob uma licença diferente.
