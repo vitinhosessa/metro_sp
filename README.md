@@ -35,7 +35,10 @@ Variável na Configuração:
 
 Reinicie o Home Assistant.
 
-## Configurar custom_updater
+
+***OBS: Existem esses dois jeitos de atualizar esse custom_component (``metro_sp``) diretamente no Home Assistant. Só que eles dois não podem estar instalados juntos. Escolha apenas um deles!***
+
+## Configurar [``custom_updater``](https://github.com/custom-components/custom_updater)
 Adicione no ``configuration.yaml``:
 ````yaml
 custom_updater:
@@ -43,6 +46,17 @@ custom_updater:
     - https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/custom_components.json
 ````
 Sempre que o ``metro_sp`` for atualizado pelo ``custom_updater``, reinicie o Home Assistant.
+
+## Configurar [HACS (Home Assistant Community Store)](https://github.com/custom-components/hacs)
+Entre na aba ``Community``, depois entre na aba ``Settings`` do HACS.
+
+Copie esse link: ``https://github.com/vitinhosessa/metro_sp``
+
+Cole o link em ``CUSTOM INTEGRATION REPO'S`` e clique no disquete.
+
+Agora vá na aba ``Store``, procure ``Metro``, clique em ``Manage`` e depois clique em ``Install``. Mesmo que você já tenha instalado esse custom_component antes.
+
+Reinicie o Home Assistant.
 
 ## Exemplo Lovelace Card
 
@@ -69,9 +83,13 @@ entities:
 
 ## Changelog
 
+### [0.1b4] - 2019-05-23
+#### Adições
+- Agora é possível colocar o custom_component no HACS (Home Assistant Community Store).
+
 ### [0.1b3] - 2019-05-21
 #### Adições
- - Foi adicionado uma variável na configuração ``scan_interval`` caso queria mudar a frequência das atualizações das informações das linhas.
+- Foi adicionado uma variável na configuração ``scan_interval`` caso queria mudar a frequência das atualizações das informações das linhas.
 #### Melhorias
 - Implementado um jeito melhor para fazer o update a cada 5 min.
 
