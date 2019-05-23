@@ -35,7 +35,10 @@ Configuration variable:
 
 Restart your Home Assistant.
 
-## Config custom_updater
+
+***PS: There are two ways to update this custom_component (`` metro_sp``) directly in the Home Assistant. Except that the two of them can not be installed together. Choose only one of them!***
+
+## Config [``custom_updater``](https://github.com/custom-components/custom_updater)
 Add to ``configuration.yaml``:
 ````yaml
 custom_updater:
@@ -43,6 +46,17 @@ custom_updater:
     - https://raw.githubusercontent.com/vitinhosessa/metro_sp/master/custom_components.json
 ````
 Whenever ``metro_sp`` is updated by `` custom_updater``, restart your Home Assistant.
+
+## Config [HACS (Home Assistant Community Store)](https://github.com/custom-components/hacs)
+Go to ``Community`` tab, then go to ``Settings`` tab on HACS.
+
+Copy this link: ``https://github.com/vitinhosessa/metro_sp``
+
+Paste this link into ``CUSTOM INTEGRATION REPO'S`` and click on the floppy disk.
+
+Now go to ``Store`` tab, search ``Metro``, click on ``Manage`` and click on ``Install``. Even if you have already installed this custom_component before.
+
+Restart your Home Assistant.
 
 ## Lovelace Card Example
 
@@ -68,6 +82,10 @@ entities:
 ````
 
 ## Changelog
+
+### [0.1b4] - 2019-05-23
+#### Adições
+- Now it's possible to add the custom_component on HACS (Home Assistant Community Store).
 
 ### [0.1b3] - 2019-05-21
 #### New
