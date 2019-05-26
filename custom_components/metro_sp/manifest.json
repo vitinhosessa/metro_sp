@@ -1,6 +1,6 @@
 {
   "domain": "metro_sp",
-  "name": "Metro São Paulo",
+  "name": "Metro e CPTM São Paulo",
   "documentation": "https://github.com/vitinhosessa/metro_sp/blob/master/README.md",
   "dependencies": [],
   "codeowners": ["@vitinhosessa"],
