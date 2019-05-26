@@ -55,7 +55,7 @@ Configuration variable:
 Restart your Home Assistant.
 
 
-***PS: There are two ways to update this custom_component (`` metro_sp``) directly in the Home Assistant. Except that the two of them can not be installed together. Choose only one of them!***
+***PS: There are two ways to update this custom_component (``metro_sp``) directly in the Home Assistant. Except that the two of them can not be installed together. Choose only one of them!***
 
 ## Config [``custom_updater``](https://github.com/custom-components/custom_updater)
 Add to ``configuration.yaml``:
