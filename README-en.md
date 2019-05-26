@@ -1,20 +1,36 @@
-# São Paulo Subway
+# São Paulo Subway and Train
 
 Leia isso em [Brazillian Portuguese](README.md).
 
 The data of the lines 1 (Blue), 2 (Green), 3 (Red), 4 (Yellow), 5 (Purple) and 15 (Silver) of the São Paulo's subway are taken from [Metro](http://www.metro.sp.gov.br/).
 
-The custom_component creates 6 sensors:
+The data of the lines 7 (Ruby), 8 (Diamond), 9 (Emerald), 10 (Turquoise), 11 (Coral), 12 (Sapphire) and 13 (Jade) of the São Paulo's train are taken from [CPTM](https://www.cptm.sp.gov.br/Pages/Home.aspx).
+
+The custom_component can create up to 13 sensors:
 * sensor.linha_1_azul
 * sensor.linha_2_verde
 * sensor.linha_3_vermelha
 * sensor.linha_4_amarela
 * sensor.linha_5_lilas
 * sensor.linha_15_prata
+* sensor.linha_7_rubi
+* sensor.linha_8_diamante
+* sensor.linha_9_esmeralda
+* sensor.linha_10_turquesa
+* sensor.linha_11_coral
+* sensor.linha_12_safira
+* sensor.linha_13_jade
 
-The 3 possible results:
+The 4 possible results for Metro sensors:
 * Normal (Normal)
 * Velocidade Reduzida (Reduced Speed)
+* Paralisada (Paralyzed)
+* Fechado (Closed)
+
+The 4 possible results for CPTM sensors:
+* Normal (Normal)
+* Velocidade Reduzida (Reduced Speed)
+* Parcial (Partial)
 * Fechado (Closed)
 
 ## Installation
@@ -27,11 +43,14 @@ Add to ``configuration.yaml``:
 ````yaml
 sensor:
   - platform: metro_sp
-    scan_interval: 300  # Optional
+    scan_interval: 120  # Optional
+    selecionar: metro # Optional
 ````
 
 Configuration variable:
 * **scan_interval** (Optional): The default is value is 300 (5 minutes) if you don't want to declare this variable. You can change to any value you want but keep in mind that the lowest value will make more updates, and will pick up an information on the Subway website and may have a speed drop on the Home Assist system and a maybe a crash. I think the lowest safest value is 60 seconds (1 minute).
+
+* **selecionar** (Optional): The default is ``ambos`` (which means "both") if you don't want to declare this variable. You can switch to ``metro`` or ``cptm``. If you choose ``metro``, it will only create entities of the Metro lines, which are: 1 (Blue), 2 (Green), 3 (Red), 4 (Yellow), 5 (Purple), and 15 (Silver). If you choose ``cptm``, it will only create entities from CPTM lines, which are: 7 (Ruby), 8 (Diamond), 9 (Emerald), 10 (Turquoise), 11 (Coral), 12 (Sapphire) and 13 (Jade).
 
 Restart your Home Assistant.
 
@@ -60,7 +79,7 @@ Restart your Home Assistant.
 
 ## Lovelace Card Example
 
-<img src="/images/lovelace-card-metro.png" alt="lovelace-card-metro" width="500px" align="center">
+<img src="/images/lovelace-card-metro-cptm.png" alt="lovelace-card-metro-cptm" width="1500px" align="center">
 
 ````yaml
 type: entities
@@ -68,20 +87,34 @@ title: Metro
 show_header_toggle: false
 entities:
   - entity: sensor.linha_1_azul
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_2_verde
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_3_vermelha
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_4_amarela
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_5_lilas
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_15_prata
-    icon: 'mdi:subway-variant'
+````
+
+````yaml
+type: entities
+title: CPTM
+show_header_toggle: false
+entities:
+  - entity: sensor.linha_7_rubi
+  - entity: sensor.linha_8_diamante
+  - entity: sensor.linha_9_esmeralda
+  - entity: sensor.linha_10_turquesa
+  - entity: sensor.linha_11_coral
+  - entity: sensor.linha_12_safira
+  - entity: sensor.linha_13_jade
 ````
 
 ## Changelog
+
+### [0.2] - 2019-05-26
+#### Adições
+- Lines 7 (Ruby), 8 (Diamond), 9 (Emerald), 10 (Turquoise), 11 (Coral), 12 (Sapphire) and 13 (Jade) from CPTM of São Paulo were added.
+- Now entities are created with the "mdi: subway-variant" icon when the line is functioning normally, and when it is with Reduced Speed, Partial, Paralyzed or Closed the icon changes to "mdi: subway-alert-variant".
+- Option to choose which entities will be created, the Metro lines or the CPTM lines or both.
 
 ### [0.1b4] - 2019-05-23
 #### Adições
