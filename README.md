@@ -114,7 +114,7 @@ entities:
 #### Adições
 - Foram adicionadas as linhas 7 (Rubi), 8 (Diamante), 9 (Esmeralda), 10 (Turquesa), 11 (Coral), 12 (Safira) e 13 (Jade) da CPTM de São Paulo.
 - Agora as entidades já são criadas com o icone mdi:subway-variant quando a linha está funcionando normalmente, e quando está com Velocidade Reduzida, parcial, paralisada ou fechado o icone muda para mdi:subway-alert-variant.
-- Opção de escolher quais entidades vao ser criadas, as linhas do Metro ou as linhas da CPTM ou ambas.
+- Opção de escolher quais entidades vão ser criadas, as linhas do Metro ou as linhas da CPTM ou ambas.
 
 ### [0.1b4] - 2019-05-23
 #### Adições
