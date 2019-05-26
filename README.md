@@ -6,7 +6,7 @@ Os dados das linhas 1 (Azul), 2 (Verde), 3 (Vermelha), 4 (Amarela), 5 (Lilas) e 
 
 Os dados das linhas 7 (Rubi), 8 (Diamante), 9 (Esmeralda), 10 (Turquesa), 11 (Coral), 12 (Safira) e 13 (Jade) da CPTM de São Paulo são tirados do site da [CPTM](https://www.cptm.sp.gov.br/Pages/Home.aspx).
 
-O custom_component cria 13 sensores: 
+O custom_component pode criar até 13 sensores: 
 * sensor.linha_1_azul
 * sensor.linha_2_verde
 * sensor.linha_3_vermelha
@@ -43,11 +43,14 @@ Adicione no ``configuration.yaml``:
 ````yaml
 sensor:
   - platform: metro_sp
-    scan_interval: 300  # Opicional
+    scan_interval: 180  # Opicional
+    selecionar: metro # Opicional
 ````
 
 Variável na Configuração:
 * **scan_interval** (Opicional): O padrão é 300 (5 minutos) caso não declarar essa variavel. Você pode mudar para qualquer valor que desejar, mas tenha em mente que quanto menor o valor, mais vezes o Home Assistant vai pegar a informção no site do Metro e isso pode causar uma queda de velocidade no sistema do Home Assistant e até causar falhas. Eu acho seguro no valor minimo de 60 segundos (1 minuto).
+
+* **selecionar** (Opicional): O padrão é ``ambos`` caso não declarar essa variavel. Você pode mudar para ``metro`` ou ``cptm``. Se você escolher ``metro``, ele só vai criar entidades das linhas do Metro, que são: 1 (Azul), 2 (Verde), 3 (Vermelha), 4 (Amarela), 5 (Lilas) e 15 (Prata). Se você escolher ``cptm``, ele só vai criar entidades das linhas da CPTM, que são: 7 (Rubi), 8 (Diamante), 9 (Esmeralda), 10 (Turquesa), 11 (Coral), 12 (Safira) e 13 (Jade).
 
 Reinicie o Home Assistant.
 
@@ -110,7 +113,8 @@ entities:
 ### [0.2] - 2019-05-26
 #### Adições
 - Foram adicionadas as linhas 7 (Rubi), 8 (Diamante), 9 (Esmeralda), 10 (Turquesa), 11 (Coral), 12 (Safira) e 13 (Jade) da CPTM de São Paulo.
-- Agora as entidades já são criadas com o icone mdi:subway-variant quando a linha está funcionando normalmente, e quando está com Velocidade Reduzida, parcial, paralisada ou fechado o icone muda para mdi:subway-alert-variant
+- Agora as entidades já são criadas com o icone mdi:subway-variant quando a linha está funcionando normalmente, e quando está com Velocidade Reduzida, parcial, paralisada ou fechado o icone muda para mdi:subway-alert-variant.
+- Opção de escolher quais entidades vao ser criadas, as linhas do Metro ou as linhas da CPTM ou ambas.
 
 ### [0.1b4] - 2019-05-23
 #### Adições
