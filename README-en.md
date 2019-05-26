@@ -111,13 +111,13 @@ entities:
 ## Changelog
 
 ### [0.2] - 2019-05-26
-#### Adições
+#### New
 - Lines 7 (Ruby), 8 (Diamond), 9 (Emerald), 10 (Turquoise), 11 (Coral), 12 (Sapphire) and 13 (Jade) from CPTM of São Paulo were added.
 - Now entities are created with the "mdi: subway-variant" icon when the line is functioning normally, and when it is with Reduced Speed, Partial, Paralyzed or Closed the icon changes to "mdi: subway-alert-variant".
 - Option to choose which entities will be created, the Metro lines or the CPTM lines or both.
 
 ### [0.1b4] - 2019-05-23
-#### Adições
+#### New
 - Now it's possible to add the custom_component on HACS (Home Assistant Community Store).
 
 ### [0.1b3] - 2019-05-21
