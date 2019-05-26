@@ -1,7 +1,6 @@
 # -*- coding: iso-8859-15 -*
 from datetime import timedelta
 from homeassistant.helpers.entity import Entity
-#from homeassistant.const import CONF_SELECIONAR
 from homeassistant.components.sensor import (
     PLATFORM_SCHEMA)
 import voluptuous as vol
