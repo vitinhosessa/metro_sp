@@ -1,20 +1,36 @@
-# Metro São Paulo
+# Metro e CPTM São Paulo
 
 Read this in [English](README-en.md).
 
 Os dados das linhas 1 (Azul), 2 (Verde), 3 (Vermelha), 4 (Amarela), 5 (Lilas) e 15 (Prata) do Metro de São Paulo são tirados do site do [Metro](http://www.metro.sp.gov.br/).
 
-O custom_component cria 6 sensores: 
+Os dados das linhas 7 (Rubi), 8 (Diamante), 9 (Esmeralda), 10 (Turquesa), 11 (Coral), 12 (Safira) e 13 (Jade) da CPTM de São Paulo são tirados do site da [CPTM](https://www.cptm.sp.gov.br/Pages/Home.aspx).
+
+O custom_component cria 13 sensores: 
 * sensor.linha_1_azul
 * sensor.linha_2_verde
 * sensor.linha_3_vermelha
 * sensor.linha_4_amarela
 * sensor.linha_5_lilas
 * sensor.linha_15_prata
+* sensor.linha_7_rubi
+* sensor.linha_8_diamante
+* sensor.linha_9_esmeralda
+* sensor.linha_10_turquesa
+* sensor.linha_11_coral
+* sensor.linha_12_safira
+* sensor.linha_13_jade
 
-Os 3 possiveis resultados:
+Os 4 resultados possiveis para os sensores do Metro:
 * Normal
 * Velocidade Reduzida
+* Paralisada
+* Fechado
+
+Os 4 resultados possiveis para os sensores da CPTM:
+* Normal
+* Velocidade Reduzida
+* Parcial
 * Fechado
 
 ## Instalação
@@ -60,7 +76,7 @@ Reinicie o Home Assistant.
 
 ## Exemplo Lovelace Card
 
-<img src="/images/lovelace-card-metro.png" alt="lovelace-card-metro" width="500px" align="center">
+<img src="/images/lovelace-card-metro-cptm.png" alt="lovelace-card-metro-cptm" width="1500px" align="center">
 
 ````yaml
 type: entities
@@ -68,20 +84,33 @@ title: Metro
 show_header_toggle: false
 entities:
   - entity: sensor.linha_1_azul
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_2_verde
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_3_vermelha
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_4_amarela
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_5_lilas
-    icon: 'mdi:subway-variant'
   - entity: sensor.linha_15_prata
-    icon: 'mdi:subway-variant'
+````
+
+````yaml
+type: entities
+title: CPTM
+show_header_toggle: false
+entities:
+  - entity: sensor.linha_7_rubi
+  - entity: sensor.linha_8_diamante
+  - entity: sensor.linha_9_esmeralda
+  - entity: sensor.linha_10_turquesa
+  - entity: sensor.linha_11_coral
+  - entity: sensor.linha_12_safira
+  - entity: sensor.linha_13_jade
 ````
 
 ## Changelog
+
+### [0.2] - 2019-05-26
+#### Adições
+- Foram adicionadas as linhas 7 (Rubi), 8 (Diamante), 9 (Esmeralda), 10 (Turquesa), 11 (Coral), 12 (Safira) e 13 (Jade) da CPTM de São Paulo.
+- Agora as entidades já são criadas com o icone mdi:subway-variant quando a linha está funcionando normalmente, e quando está com Velocidade Reduzida, parcial, paralisada ou fechado o icone muda para mdi:subway-alert-variant
 
 ### [0.1b4] - 2019-05-23
 #### Adições
